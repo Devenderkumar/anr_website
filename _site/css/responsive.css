@@ -1,0 +1,317 @@
+	/* ==================== Responsive ======================= */
+@media (min-width: 768px) {
+.container {
+    width: 750px;
+}
+.visible-xs,
+.about-item-content img {
+	display:none;
+}
+
+}
+@media (min-width: 992px) {
+.container {
+    width: 970px;
+}
+.header-mb,
+.mobilenav {
+  display: none;
+}
+
+}
+
+@media (min-width: 1200px) {
+.container {
+    width: 1170px;
+}
+
+}
+
+@media (min-width: 1400px) {
+.irs-form990 {
+  max-width: 80%;
+}
+
+}
+
+
+/*Desktop Screen 1024px  */
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+
+}
+
+
+/* Mobile and Tablet Layout: 320px to 768px.  */
+@media only screen and (max-width:991px) {
+.header-wrap .container {
+  display: none;
+}
+.mb-nav-btn {
+  border-right: 3px solid #000000;
+  float: left;
+  height: 60px;
+  padding-top: 8px;
+  text-align: center;
+  width: 60px;
+}
+.navicon {
+  background-color: #000000;
+  display: inline-block;
+  height: 4px;
+  position: relative;
+  width: 34px;
+}
+.navicon:before,
+.navicon:after {
+  background-color: #000000;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: -9px;
+  width: 34px;
+}
+.navicon:before {
+  bottom: -9px;
+  top: auto;
+}
+.header990-text {
+  float: left;
+  text-align: center;
+  width: calc(100% - 65px);
+}
+.header990-text a {
+  color: #000000;
+  font-family: 'Helvetica Neue LT Std';
+  font-size: 30px;
+  font-weight: 900;
+  text-decoration: none;
+}
+.mobilenav {
+  background-color: #FFF;
+  border-right: 2px solid #000000;
+  left: -60%;
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  transition: all 0.35s ease-out 0s;
+  width: 60%;
+}
+body.active {
+  overflow: hidden;
+}
+body.active .mobilenav {
+  left: 0;
+}
+.header-wrap {
+  transition: all 0.35s ease-out 0s;
+}
+body.active .header-wrap {
+  left: 60%;
+  transition: all 0.35s ease-out 0s;
+}
+.main-content-wrap {
+  transition: all 0.35s ease-out 0s;
+}
+.main-content-wrap.active {
+  transform: translate3d(60%, 0px, 0px);
+  position: relative;
+}
+.mobile-main-nav li a {
+  border-bottom: 2px solid #000000;
+  color: #000000;
+  display: block;
+  font-family: 'Helvetica Neue LT Std';
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+.footer-nav {
+  display: block;
+}
+.copyright-text {
+  margin-bottom: 0;
+}
+
+}
+
+
+/* Tablet Layout: 768px.  */
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+.header-banner-content h2 {
+  margin-bottom: 55px;
+}
+.header-banner-content h3 {
+  font-size: 40px;
+  margin-bottom: 35px;
+}
+.header-banner-button {
+  padding: 10px 45px;
+}
+.header-banner {
+  padding-bottom: 30px;
+}
+.big-title-bar .big-title {
+  padding-left: 20px;
+}
+.big-title-bar h2.big-title-text {
+  font-size: 27px;
+}
+.about-big-title {
+  margin-top: 310px;
+  right: 0;
+}
+.about-item-content {
+  padding-right: 20px;
+}
+.contact-section .container {
+  max-width: 650px;
+}
+
+}
+
+
+/* Mobile Layout: 480px.  */
+
+@media only screen and (max-width:767px) {
+.hidden-xs{
+	display:none !important;
+}
+.header-banner:after {
+  background-image: url("../images/slider-img-mobile.png");
+}
+.header-banner-content h2 {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+.header-banner-content h2 span {
+  font-size: 66px;
+}
+.header-banner-content h3 {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+.header-banner-button {
+  font-size: 27px;
+  padding: 10px 45px;
+}
+.header-banner {
+  padding-bottom: 50px;
+}
+.big-title-bar .big-title {
+  font-size: 30px;
+  height: 75px;
+  width: 50%;
+}
+.services-section .section-row {
+  padding: 0;
+}
+.section-row .col-9 {
+  width: 100%;
+}
+.services-item-content > h2, .other-sources-content > h3 {
+  font-size: 24px;
+}
+.services-item-content > a {
+  font-size: 20px;
+}
+.services-item:last-child {
+  border-bottom: medium none;
+}
+.irs-form990 {
+  border-left: medium none;
+  padding: 40px;
+}
+.irs-form990 > h3 {
+  margin-bottom: 15px;
+}
+.irs-form990 h2 {
+  font-size: 20px;
+  line-height: 1.8;
+}
+.irs-other-sources {
+  border-left: medium none;
+}
+.other-sources-title {
+  padding: 40px;
+}
+.about-item-wrap {
+  margin-top: 25px;
+  padding: 40px;
+}
+.about-item {
+  margin-bottom: 50px;
+}
+.about-item-content {
+  padding: 0;
+  width: 100%;
+}
+.about-item-content > h2 {
+  font-size: 24px;
+}
+.about-item-content img {
+  float: left;
+  margin-right: 10px;
+}
+.media-link-wrap {
+  padding: 60px 40px 70px;
+}
+.media-link-wrap .col-6 {
+  margin-bottom: 30px;
+  width: 100%;
+}
+.contact-section .container {
+  padding: 60px 30px 100px;
+}
+.form-label {
+  width: 175px;
+}
+.form-control {
+  width: calc(100% - 175px);
+}
+
+}
+
+
+/* Wide Mobile Layout: 320px.  */
+
+@media only screen and (max-width:479px) {
+
+.header-banner-content {
+  padding: 0 10px;
+}
+.header-banner-content h2 span {
+  font-size: 46px;
+}
+.header-banner-content h3 {
+  font-size: 22px;
+}
+.big-title-bar .big-title {
+  padding-left: 0;
+}
+.about-item-content img {
+  display: block;
+  float: none;
+}
+.form-label label {
+  font-size: 20px;
+}
+.form-label {
+  width: 125px;
+}
+.form-control {
+  width: calc(100% - 125px);
+}
+.submit-btn {
+  width: 215px;
+}
+.mobile-main-nav li a {
+  font-size: 28px;
+}
+
+}
+
