@@ -1,0 +1,96 @@
+
+{{ partial "head.html" .}}
+{{ partial "subpage-nav.html" .}}
+
+<div class="main-content-wrap">
+
+  <section class="contact-banner inner-banner">
+    <div class="big-title-bar">
+      <h1 class="big-title">Blog</h1>
+      <h2 class="big-title-text"><span>Applied</span> Nonprofit Research, L.L.C.</h2>
+    </div>
+  </section>
+
+  <section class="blog-section">
+    <div class="blog-container">
+        <div class="left">
+            {{ range where .Pages "Section" "posts" }}
+            <div class="blog-box">
+                <div class="top">
+                    {{ if isset .Params "thumbnail"}}
+                    <img src="{{.Site.BaseURL}}{{ .Params.thumbnail }}" alt="" />
+                    {{ end }}
+                    <div class="detail">
+                        <h2><a href="{{ .Site.BaseURL}}posts/{{ .File.BaseFileName }}">
+                        {{ .Params.title }}</a></h2>
+                        <p>{{ .Params.description }}</p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <ul class="left-side">
+                        <li class="date">{{ .Date.Format .Site.Params.date_format }}</li>
+                        {{ if isset .Params "author"}}
+                        <li class="name"><img src="{{.Site.BaseURL}}{{.Params.authorAvatar}}" alt="Profile picture" />{{ .Params.author }}</li>
+                        {{ end }}
+                    </ul>
+                    <a href="blog-detail.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            {{ end }}
+            <div class="load-btn">
+                <a href="javaScript:Void(0)" class="load-more">Load More</a>
+            </div>
+        </div>
+        <div class="sidebar">
+            <h3>Search</h3>
+            <form class="search-form" method="post" action="#">
+                <input class="search" type="text" name="search" placeholder="Type here and press enter" required>
+            </form>
+            <div class="categories">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Lorem ipsum</a></li>
+                    <li><a href="#">Dolor sit amet</a></li>
+                    <li><a href="#">Consectetur adipiscing</a></li>
+                    <li><a href="#">Elit. Aliquam pellentesque</a></li>
+                    <li><a href="#">Dapibus laoreet</a></li>
+                    <li><a href="#">Donec gravida porta</a></li>
+                    <li><a href="#">Sem, ut laoreet risus</a></li>
+                    <li><a href="#">Commodo vel. Nam</a></li>
+                    <li><a href="#">Sit amet sagittis mauris</a></li>
+                    <li><a href="#">Ut porttitor ex nisi, sed</a></li>
+                    <li><a href="#">Ornare orci volutpat a</a></li>
+                    <li><a href="#">Nulla non vehicula nunc</a></li>
+                    <li><a href="#">Nunc quis mollis tortor, ac</a></li>
+                    <li><a href="#">Imperdiet quam</a></li>
+                </ul>
+            </div>
+            <div class="archives">
+                <h3>Archives</h3>
+                <ul>
+                    <li><a href="#">May 2018</a></li>
+                    <li><a href="#">April 2018</a></li>
+                    <li><a href="#">March 2018</a></li>
+                    <li><a href="#">February 2018</a></li>
+                    <li><a href="#">January 2018</a></li>
+                    <li><a href="#">December 2017</a></li>
+                    <li><a href="#">October 2017</a></li>
+                    <li><a href="#">September 2017</a></li>
+                    <li><a href="#">August 2017</a></li>
+                    <li><a href="#">July 2017</a></li>
+                    <li><a href="#">May 2017</a></li>
+                    <li><a href="#">April 2017</a></li>
+                    <li><a href="#">August 2016</a></li>
+                    <li><a href="#">October 2015</a></li>
+                    <li><a href="#">July 2015</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </section>
+
+{{ partial "contact.html" . }}
+      
+{{ partial "footer.html" .}}
+      
+{{ partial "script.html" .}}
