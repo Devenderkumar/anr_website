@@ -928,6 +928,17 @@ img {
     padding-bottom: 100px;
 }
 
+.blog-section .white-paper {
+    width: 55%;
+    margin: auto;
+}
+
+.whitepaper-container {
+    display: flex;
+    padding-left: 0;
+    padding-bottom: 20px;
+}
+
 .blog-container {
     display: flex;
     padding-left: 25%;

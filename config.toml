@@ -9,5 +9,7 @@ facebook = "https://facebook.com"
 
 date_format = "Jan 2, 2006"
 
-[taxonomies]
-  tag = "tags"
+disableKinds = ["section"]
+
+[permalinks]
+	posts = "/posts/:year/:month/:filename/"
