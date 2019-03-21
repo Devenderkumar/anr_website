@@ -1,8 +1,8 @@
 +++
-title = 'Aspen Hosts 990 "Vali-Datathon" as Part of Philanthropy’s Data Revolution'
-description = "More than a decade after the Internal Revenue Service began allowing nonprofits to file their returns online ..."
-date = "2018-10-22"
-thumbnail = "images/blog-img3.jpg"
+title = "Open990 and How to Access Financial Indicators from Nonprofits"
+description = "Last year, we shared a post about the Nonprofit Open Data Collective and how a consortium of nonprofits..."
+date = "2018-08-22"
+thumbnail = "images/blog-img1.jpg"
 tags = ["Chronicle", "Amazon Web Services"]
 author = "John Smith"
 authorAvatar = "images/profile-pic.png"

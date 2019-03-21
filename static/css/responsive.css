@@ -121,6 +121,10 @@
 	        max-width: unset;
 	        height: 100%;
 	    }
+
+	    .blog-section .white-paper {
+		    width: 80%;
+		}
 	}
 	
 	@media only screen and (max-width:830px) {
@@ -131,6 +135,9 @@
 	    .blog-detail .author-box .author-inner div {
 	        margin-top: 20px;
 	    }
+	    .blog-section .white-paper {
+		    width: 90%;
+		}
 	}
 	
 	@media only screen and (max-width:767px) {
@@ -163,6 +170,14 @@
 	        width: 100%;
 	        padding: 0;
 	    }
+
+	    .whitepaper-container {
+	        display: flex;
+	        padding: 0 30px;
+	    }
+	    .blog-section .white-paper {
+		    width: 100%;
+		}
 	    .load-btn {
 	        margin-bottom: 25px;
 	    }

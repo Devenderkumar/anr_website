@@ -1,4 +1,18 @@
 // Navigation
+$(document).ready(function() 
+{
+   $('.sidebar li').click(function(e) { 
+    	var currentid = this.id;
+    	$(".blog-box").each(function (index, element) {
+	        if (currentid == element.id) {
+	        	element.style.display = "block"
+	        } else {
+	        	element.style.display = "none"
+	        }
+	    });
+    	
+   });
+});
 
 $(function() {
     $('.page-scroll a').bind('click', function(event) {
