@@ -27,7 +27,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut nisl at mi 
 
 
 Integer tincidunt velit at lacus lacinia laoreet. Nam laoreet tempus massa sed commodo. Nam sit amet ex euismod, cursus lorem eu, hendrerit sapien. Integer tincidunt velit at lacus lacinia laoreet. Nam laoreet tempus massa sed commodo. Nam sit amet ex euismod, cursus lorem eu, hendrerit sapien.
-{{% ContentImage src="https://via.placeholder.com/300x300?text=Sample+Image" %}}
+
 
 1. Phasellus gravida est eget quam convallis consectetur vitae a metus. Integer risus id ullamcorper. Quisque ultricies sollicitudin magna, nec sodales ex
 2. Convallis consectetur vitae a metus. Integer laoreet malesuada
