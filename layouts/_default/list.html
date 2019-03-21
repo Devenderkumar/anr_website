@@ -45,11 +45,23 @@
             </div>
             {{ end }}
             {{ end }}
-            <div class="load-btn">
-                <a href="javaScript:Void(0)" class="load-more">Load More</a>
-            </div>
         </div>
         <div class="sidebar">
+            <div class="latest-post">
+                <h3>Latest Blog Post</h3>
+                <ul>
+                    {{ $posts := where .Site.Pages "Section" "posts" }}
+                    {{ $latest := .Site.Params.recent_posts }}
+                    {{ range first $latest $posts }}
+                    <li>
+                        {{ if isset .Params "thumbnail"}}
+                        <img src="{{.Site.BaseURL}}{{.Params.thumbnail}}" alt="">
+                        {{ end }}
+                        <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
             <div class="archives">
                 <h3>Archives</h3>
                 <ul>

@@ -36,13 +36,10 @@
                         <li class="name"><img src="{{.Site.BaseURL}}{{.Params.authorAvatar}}" alt="Profile picture" />{{ .Params.author }}</li>
                         {{ end }}
                     </ul>
-                    <a href="blog-detail.html" class="read-more">Read More</a>
+                    <a href="{{.Site.BaseURL}}whitepapers/{{ .File.BaseFileName }}" class="read-more">Read More</a>
                 </div>
             </div>
             {{ end }}
-            <div class="load-btn">
-                <a href="javaScript:Void(0)" class="load-more">Load More</a>
-            </div>
         </div>
     </div>
   </section>
