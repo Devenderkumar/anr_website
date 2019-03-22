@@ -37,7 +37,7 @@
                             {{ end }}
                         {{ end }}
                         {{ if isset .Params "author"}}
-                            {{ if isset .Params.author }}
+                            {{ if .Params.author }}
                             <li class="name"><img src="{{.Site.BaseURL}}{{.Params.authorAvatar}}" alt="Profile picture" />{{ .Params.author }}</li>
                             {{ end }}
                         {{ end }}
