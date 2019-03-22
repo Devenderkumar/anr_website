@@ -24,6 +24,7 @@
                     {{ .Content }}
 
                     {{ if isset .Params "author"}}
+                    {{ if .Params.author }}
                     <div class="author-box">
                         <h2>Get to Know the Author</h2>
                         <div class="author-inner">
@@ -46,6 +47,7 @@
                             </div>
                         </div>
                     </div>
+                    {{ end }}
                     {{ end }}
                 </div>
             </div>
