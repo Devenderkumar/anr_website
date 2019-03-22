@@ -1,0 +1,13 @@
+---
+label: whitepaper
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: description
+  label: description
+- type: list
+  name: tags
+  label: tags
