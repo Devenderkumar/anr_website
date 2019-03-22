@@ -3,27 +3,27 @@ title = "Privacy Policy"
 +++
 
 _Effective date: January 15, 2018_
-We at 990 Consulting, L.L.C. (“990”) know you care about how your personal information is used and shared, and we take your privacy seriously. Please read the following to learn more about our Privacy Policy. **By using or accessing the Services in any manner, you acknowledge that you accept the practices and policies outlined in this Privacy Policy, and you hereby consent that we will collect, use, and share your information in the following ways.**
+We at Applied Nonprofit Research, L.L.C. (“ANR”) know you care about how your personal information is used and shared, and we take your privacy seriously. Please read the following to learn more about our Privacy Policy. **By using or accessing the Services in any manner, you acknowledge that you accept the practices and policies outlined in this Privacy Policy, and you hereby consent that we will collect, use, and share your information in the following ways.**
 
-Remember that your use of 990’s Services is at all times subject to the [Terms of Service](https://www.990consulting.com/terms-of-service/), which incorporates this Privacy Policy.  Any terms we use in this Policy without defining them have the definitions given to them in the [Terms of Service](https://www.990consulting.com/terms-of-service/).
+Remember that your use of ANR’s Services is at all times subject to the [Terms of Service](https://www.appliednonprofitresearch.com/terms-of-service/), which incorporates this Privacy Policy.  Any terms we use in this Policy without defining them have the definitions given to them in the [Terms of Service](https://www.appliednonprofitresearch.com/terms-of-service/).
 
 **<u>What does this Privacy Policy cover</u>?**
 
 This Privacy Policy covers our treatment of personally identifiable information (“Personal Information”) that we gather when you are accessing or using our Services, but not to the practices of companies we don’t own or control, or people that we don’t manage.  We gather various types of Personal Information from our users, as explained in more detail below, and we use this Personal Information internally in connection with our Services, including to personalize, provide, and improve our services, to allow you to set up a user account and profile, to contact you and allow other users to contact you, to fulfill your requests for certain products and services, and to analyze how you use the Services. In certain cases, we may also share some Personal Information with third parties, but only as described below.
 
-As noted in the [Terms of Service](https://www.990consulting.com/terms-of-service/), we do not knowingly collect or solicit personal information from anyone under the age of 13. If you are under 13, please do not attempt to register for the Services or send any personal information about yourself to us. If we learn that we have collected personal information from a child under age 13, we will delete that information as quickly as possible. If you believe that a child under 13 may have provided us personal information, please contact us at [info@990consulting.com](mailto:info@990consulting.com).
+As noted in the [Terms of Service](https://www.appliednonprofitresearch.com/terms-of-service/), we do not knowingly collect or solicit personal information from anyone under the age of 13. If you are under 13, please do not attempt to register for the Services or send any personal information about yourself to us. If we learn that we have collected personal information from a child under age 13, we will delete that information as quickly as possible. If you believe that a child under 13 may have provided us personal information, please contact us at [info@appliednonprofitresearch.com](mailto:info@appliednonprofitresearch.com).
 
-**<u>Will 990 ever change this Privacy Policy</u>?**
+**<u>Will ANR ever change this Privacy Policy</u>?**
 
-We’re constantly trying to improve our Services, so we may need to change this Privacy Policy from time to time as well, but we will alert you to changes by placing a notice on 990consulting.com and/or 990consulting.com, by sending you an email, and/or by some other means. Please note that if you’ve opted not to receive legal notice emails from us (or you haven’t provided us with your email address), those legal notices will still govern your use of the Services, and you are still responsible for reading and understanding them.  If you use the Services after any changes to the Privacy Policy have been posted, that means you agree to all of the changes. Use of information we collect now is subject to the Privacy Policy in effect at the time such information is collected.
+We’re constantly trying to improve our Services, so we may need to change this Privacy Policy from time to time as well, but we will alert you to changes by placing a notice on appliednonprofitresearch.com and/or appliednonprofitresearch.com, by sending you an email, and/or by some other means. Please note that if you’ve opted not to receive legal notice emails from us (or you haven’t provided us with your email address), those legal notices will still govern your use of the Services, and you are still responsible for reading and understanding them.  If you use the Services after any changes to the Privacy Policy have been posted, that means you agree to all of the changes. Use of information we collect now is subject to the Privacy Policy in effect at the time such information is collected.
 
-**<u>What Information does 990 Collect</u>?**
+**<u>What Information does ANR Collect</u>?**
 
 _<u>Information You Provide to Us:</u>_
 
 We receive and store any information you knowingly provide to us. For example, through the registration process and/or through your account settings, we may collect Personal Information such as your name, email address and phone number.  Certain information may be required to register with us or to take advantage of some of our features.
 
-We may communicate with you if you’ve provided us the means to do so. For example, if you’ve given us your email address, we may send you promotional email offers on behalf of other businesses, or email you about your use of the Services.   If you do not want to receive communications from us, please indicate your preference by emailing us at [info@990consulting.com](mailto:info@990consulting.com).
+We may communicate with you if you’ve provided us the means to do so. For example, if you’ve given us your email address, we may send you promotional email offers on behalf of other businesses, or email you about your use of the Services.   If you do not want to receive communications from us, please indicate your preference by emailing us at [info@appliednonprofitresearch.com](mailto:info@appliednonprofitresearch.com).
 
 _<u>Information Collected Automatically</u>_
 
@@ -37,7 +37,7 @@ _<u>Information Collected From Other Websites and Do Not Track Policy</u>_
 
 Through cookies we place on your browser or device, we may collect information about your online activity after you leave our Services.  Just like any other usage information we collect, this information allows us to improve the    Services and customize your online experience, and otherwise as described in this Privacy Policy.  Your browser may offer you a “Do Not Track” option, which allows you to signal to operators of websites and web applications and services (including behavioral advertising services) that you do not wish such operators to track certain of your online activities over time and across different websites.  Our Services do not support Do Not Track requests at this time, which means that we collect information about your online activity both while you are using the Services and after you leave our Services
 
-**<u>Will 990 Share Any of the Personal Information it Receives</u>?**
+**<u>Will ANR Share Any of the Personal Information it Receives</u>?**
 
 We do not rent or sell your Personal Information in personally identifiable form to anyone, provided certain Personal Information may be transferred in connection with business transfers, and as otherwise described below. We may share your Personal Information with third parties as described in this section:
 
@@ -66,16 +66,16 @@ You may access, and, in some cases, edit or delete the following information you
 - email address
 - location
 
-The information you can view, update, and delete may change as the Services change.  If you have any questions about viewing or updating information we have on file about you, please contact us at [info@990consulting.com](mailto:info@990consulting.com).
+The information you can view, update, and delete may change as the Services change.  If you have any questions about viewing or updating information we have on file about you, please contact us at [info@appliednonprofitresearch.com](mailto:info@appliednonprofitresearch.com).
 
-Under California Civil Code Sections 1798.83-1798.84, California residents are entitled to contact us to prevent disclosure of Personal Information to third parties for such third parties’ direct marketing purposes; in order to submit such a request, please contact us at [info@990consulting.com](mailto:info@990consulting.com).
+Under California Civil Code Sections 1798.83-1798.84, California residents are entitled to contact us to prevent disclosure of Personal Information to third parties for such third parties’ direct marketing purposes; in order to submit such a request, please contact us at [info@appliednonprofitresearch.com](mailto:info@appliednonprofitresearch.com).
 
 **<u>What choices do I have</u>?**
 
 You can always opt not to disclose information to us, but keep in mind some information may be needed to register with us or to take advantage of some of our features.
 
-You may be able to add, update, or delete information as explained above.  When you update information, however, we may maintain a copy of the unrevised information in our records.  You may request deletion of your account by emailing us at info@990consulting.com.  Some information may remain in our records after your deletion of such information from your account. We may use any aggregated data derived from or incorporating your Personal Information after you update or delete it, but not in a manner that would identify you personally.
+You may be able to add, update, or delete information as explained above.  When you update information, however, we may maintain a copy of the unrevised information in our records.  You may request deletion of your account by emailing us at info@appliednonprofitresearch.com.  Some information may remain in our records after your deletion of such information from your account. We may use any aggregated data derived from or incorporating your Personal Information after you update or delete it, but not in a manner that would identify you personally.
 
 **<u>What if I have questions about this policy?</u>**
 
-If you have any questions or concerns regarding our privacy policies, please send us a detailed message to [info@990consulting.com](mailto:info@990consulting.com)., and we will try to resolve your concerns.
+If you have any questions or concerns regarding our privacy policies, please send us a detailed message to [info@appliednonprofitresearch.com](mailto:info@appliednonprofitresearch.com)., and we will try to resolve your concerns.
