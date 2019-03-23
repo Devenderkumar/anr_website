@@ -23,7 +23,9 @@
                 
                 <div class="top">
                     {{ if isset .Params "thumbnail"}}
-                    <img src="{{.Site.BaseURL}}{{ .Params.thumbnail }}" alt="" />
+                        {{ if .Params.thumbnail }}
+                        <img src="{{.Site.BaseURL}}{{ .Params.thumbnail }}" alt="" />
+                        {{ end }}
                     {{ end }}
                     <div class="detail">
                         <h2><a href="{{ .Permalink }}">
@@ -34,10 +36,14 @@
                 <div class="bottom">
                     <ul class="left-side">
                         {{ if isset .Params "date"}}
-                        <li class="date">{{ .Date.Format .Site.Params.date_format }}</li>
+                            {{ if .Params.date }}
+                            <li class="date">{{ .Date.Format .Site.Params.date_format }}</li>
+                            {{ end }}
                         {{ end }}
                         {{ if isset .Params "author"}}
-                        <li class="name"><img src="{{.Site.BaseURL}}{{.Params.authorAvatar}}" alt="Profile picture" />{{ .Params.author }}</li>
+                            {{ if .Params.author }}
+                            <li class="name"><img src="{{.Site.BaseURL}}{{.Params.authorAvatar}}" alt="Profile picture" />{{ .Params.author }}</li>
+                            {{ end }}
                         {{ end }}
                     </ul>
                     <a href="{{ .Permalink }}" class="read-more">Read More</a>
