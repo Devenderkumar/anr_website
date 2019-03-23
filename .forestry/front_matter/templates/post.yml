@@ -39,5 +39,3 @@ fields:
 - type: text
   name: authorGoogle
   label: authorGoogle
-pages:
-- content/posts/test-forestry-posting.md
