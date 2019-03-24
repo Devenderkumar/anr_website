@@ -13,9 +13,7 @@ thumbnail = "/uploads/tags.jpg"
 title = "Test-Forestry-posting"
 
 +++
-
-![hero-image](/uploads/images/blog-img2.jpg)
-
+![](/uploads/images/blog-post-04.png)
 
 This is testing
 
@@ -31,20 +29,7 @@ This is testing
 
 This is testing
 
-
-
 This is testing
-
-This is testing
-
-This is testing
-
-This is testing
-
-This is testing
-
-This is testing
-
 
 This is testing
 
@@ -58,3 +43,12 @@ This is testing
 
 This is testing
 
+This is testing
+
+This is testing
+
+This is testing
+
+This is testing
+
+This is testing
