@@ -63,13 +63,15 @@
                 <ul>
                     {{ $posts := where .Site.Pages "Section" "posts" }}
                     {{ $latest := .Site.Params.recent_posts }}
-                    {{ range first $latest $posts }}
+                    {{ range $index, $item := first $latest $posts }}
+                    {{ if ne (trim $item "\n") "Page(/posts)" }}
                     <li>
                         {{ if isset .Params "thumbnail"}}
                         <img src="{{.Site.BaseURL}}{{.Params.thumbnail}}" alt="">
                         {{ end }}
                         <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
                     </li>
+                    {{ end }}
                     {{ end }}
                 </ul>
             </div>
