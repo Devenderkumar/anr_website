@@ -8,7 +8,6 @@ authorInfo = "David Bruce Borenstein, Ph.D., is a partner at Applied Nonprofit R
 authorTwitter = ""
 date = "2018-06-04T04:00:00+00:00"
 description = "Learn to extract, transform, and interpret data from the IRS 990 e-file dataset, a corpus of over two million tax returns from hundreds of thousands of nonprofits since 2010."
-draft = true
 tags = ["dataset", "open government", "nonprofit technology", "open data", "data science"]
 thumbnail = "/uploads/efile_xml.png"
 title = "The IRS 990 e-file dataset: getting to the chocolatey center of data deliciousness"
