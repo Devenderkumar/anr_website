@@ -12,3 +12,5 @@ fields:
 - type: list
   name: tags
   label: tags
+pages:
+- content/whitepapers/testing-123.md
