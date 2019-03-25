@@ -15,12 +15,14 @@
     <div class="blog-container">
         <div class="left">
             {{ range $index, $item := where .Site.Pages "Type" "posts" }}
-            {{ $posts := where .Site.Pages "Type" "posts" }}
-            {{ $last := len $posts }}
-
-            {{ if ne $index (sub $last 1) }}
+            {{ if ne (trim $item "\n") "Page(/posts)" }}
+            {{ if isset .Params "date"}}
+            {{ if .Params.date }}
             <div class="blog-box" id='{{ .Date.Format "Jan 2006" | urlize }}'>
-                
+            {{ end }}
+            {{ else }}
+            <div class="blog-box">
+            {{ end }}
                 <div class="top">
                     {{ if isset .Params "thumbnail"}}
                         {{ if .Params.thumbnail }}
@@ -28,8 +30,11 @@
                         {{ end }}
                     {{ end }}
                     <div class="detail">
-                        <h2><a href="{{ .Permalink }}">
-                        {{ .Params.title }}</a></h2>
+                        <h2>
+                            <a href="{{ .Permalink }}">
+                                {{ .Params.title }}
+                            </a>
+                        </h2>
                         <p>{{ .Params.description }}</p>
                     </div>
                 </div>
@@ -58,13 +63,15 @@
                 <ul>
                     {{ $posts := where .Site.Pages "Section" "posts" }}
                     {{ $latest := .Site.Params.recent_posts }}
-                    {{ range first $latest $posts }}
+                    {{ range $index, $item := first $latest $posts }}
+                    {{ if ne (trim $item "\n") "Page(/posts)" }}
                     <li>
                         {{ if isset .Params "thumbnail"}}
                         <img src="{{.Site.BaseURL}}{{.Params.thumbnail}}" alt="">
                         {{ end }}
                         <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
                     </li>
+                    {{ end }}
                     {{ end }}
                 </ul>
             </div>
