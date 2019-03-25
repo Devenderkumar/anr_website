@@ -18,17 +18,23 @@ title = "The IRS 990 e-file dataset: getting to the chocolatey center of data de
 
 In June 2016, the IRS [unleashed a torrent](https://www.irs.gov/newsroom/irs-makes-electronically-filed-form-990-data-available-in-new-format) of electronic data on the nonprofit sector. Blandly dubbed the “[IRS 990 filings](https://registry.opendata.aws/irs990/),” these millions of files each contain hundreds of details about a nonprofit’s spending, revenue, compensation, fundraising and more.
 
+![](/uploads/nfl_990.png)
+
 The data itself wasn’t new: the IRS has been collecting these disclosures [since 1940](https://en.wikipedia.org/wiki/Form_990). Nor had the public been denied access: scans of the paper records have been [sold by the IRS](https://www.irs.gov/charities-non-profits/copies-of-scanned-eo-returns-available) for years, and are available for free from [archive.org](https://archive.org/details/IRS990).
 
 What was new was the availability of electronic files in their _native format_ of [XML](https://www.w3schools.com/xml/xml_whatis.asp). This meant that, for the first time, researchers could analyze the data directly, without a costly image-to-text ([OCR](https://en.wikipedia.org/wiki/Optical_character_recognition)) step — or worse, manual data entry.
 
 A couple months before the data release, I had just started a job at [Charity Navigator](https://www.charitynavigator.org/), which rates nonprofits based on nonprofit tax filings. (I now work at[ 990 Consulting](https://www.990consulting.com/), which hosts the free service [Open990](https://www.open990.com/).) Charity Navigator has a hardworking [team](https://www.charitynavigator.org/index.cfm?bay=content.view&cpid=19) of data analysts, who historically typed in [critical 990 data](https://www.charitynavigator.org/index.cfm?bay=content.view&cpid=33) by hand before crunching the numbers. Needless to say, the upcoming release was a Very Big Deal.
 
+![](/uploads/datathon.jpg)
+
 Yet it took more than a year — and [two](https://www.aspeninstitute.org/blog-posts/aspen-institutes-program-philanthropy-social-innovation-psi-hosts-nonprofit-datathon/) [rounds](https://www.aspeninstitute.org/blog-posts/aspen-hosts-990-vali-datathon-part-philanthropys-data-revolution/) of cross-organizational barn-raising— before nearly anyone was able to do much of anything with these data. There are several reasons for this. In this article, I will go over some of the challenges a would-be user would face, and how we’ve solved them at [Open990](https://www.open990.com/).
 
 ## What's inside the box
 
 Although the dataset is called “IRS 990 filings,” there are three separate tax forms contained inside it: the 990, the 990EZ, and the 990PF.
+
+![](/uploads/990_comparison.png)
 
 Most tax-exempt organizations are required to annually file a [Form 990](https://www.irs.gov/forms-pubs/about-form-990)(“Return of Organization Exempt from Income Tax”) with the IRS. If you’re a small-ish organization that isn’t subject to special regulations (as are schools and hospitals), you can file the [IRS Form 990EZ](https://www.irs.gov/forms-pubs/about-form-990ez), which is the short form version of the 990. But the EZ is not just an excerpt of the full form: the numbering is different, the descriptions are different, the order is different, and some items have been rolled together in ways that are definitely not designed to be easily compared.
 
@@ -38,11 +44,17 @@ Private foundations — regardless of size — file a different document called 
 
 While more than half of the dataset consists of IRS 990 filings, the EZs and the PFs are not to be ignored.
 
+![](/uploads/filings_by_year.png)
+
 There are over 120 thousand organizations for which we have seven years’ worth of filings, making it a treasure trove for comparative data. ([Open990](https://www.open990.com/), my social enterprise, specializes in providing such comparative data.)
+
+![](/uploads/filing_count_histo.png)
 
 ## Understanding schema versions
 
 Stop me if you’ve heard this one: you just spent hours (or days) staring at 990 filings in XML format, finding the specific locations (or “[Xpaths](https://www.w3schools.com/Xml/xpath_intro.asp)”) for the data you want. Then you go to run your import script, and…it doesn’t work on half the filings. Why? I’ll tell you why.
+
+![](/uploads/efile_xml.png)
 
 Look closely at the XML above. See the very first tag, called <Return>? It has an attribute, returnVersion, that you may reasonably have decided to ignore. Don’t.
 
@@ -60,7 +72,7 @@ The same GitHub repository contains a Python program that scans all of the retur
 
 [Apache Spark](https://spark.apache.org/), part of the [Hadoop](http://www.bmc.com/guides/hadoop-ecosystem.html) ecosystem, is used for [unimaginably huge datasets](https://databricks.com/session/netflix-productionizing-spark-on-yarn-for-etl-at-petabyte-scale). By comparison, the entire 990 dataset can fit on the hard disk of most laptops. As of this writing, there are around 2.4 million filings, most of which have only a few hundred data points. That’s not nothing, especially as those data points are deeply and inconsistently nested. But it’s not that big.
 
-  
+![](/uploads/data_points_per_filing.png)  
 So why was I using it for the Charity Navigator 990 projects? Inexperience, for starters: I had never seen a dataset like this. But it was also because finding what you want in millions of XML files takes a really long time.
 
 There are XML-specific databases that you can use, of course: [eXist](http://exist-db.org/exist/apps/homepage/index.html) and [BaseX](http://basex.org/)are among the better known. This might be the right way to go for some use cases, and if yours is one of them, [I’d love to hear about it](https://www.open990.com/contact/). For most people, though, I think this is all missing the point.
