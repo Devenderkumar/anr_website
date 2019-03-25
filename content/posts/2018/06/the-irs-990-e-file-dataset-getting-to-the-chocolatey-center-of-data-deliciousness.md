@@ -1,6 +1,6 @@
 +++
 author = "David Bruce Borenstein, PhD"
-authorAvatar = ""
+authorAvatar = "/uploads/david_circle_small.png"
 authorFacebook = ""
 authorGoogle = ""
 authorImage = "/uploads/images/david-1.png"
