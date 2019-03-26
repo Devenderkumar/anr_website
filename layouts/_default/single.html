@@ -29,7 +29,7 @@
                     <div class="author-box">
                         <h2>Get to Know the Author</h2>
                         <div class="author-inner">
-                            <img src="{{.Site.BaseURL}}{{.Params.authorImage}}" alt="">
+                            <img src="{{.Params.authorImage}}" alt="">
                             <div>
                                 <h3>{{ .Params.author }}</h3>
                                 <ul class="social">
@@ -61,7 +61,7 @@
                         {{ range first $latest $posts }}
                         <li>
                             {{ if isset .Params "thumbnail"}}
-                            <img src="{{.Site.BaseURL}}{{.Params.thumbnail}}" alt="">
+                            <img src="{{.Params.thumbnail}}" alt="">
                             {{ end }}
                             <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
                         </li>
