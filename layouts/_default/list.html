@@ -1,0 +1,97 @@
+
+{{ partial "head.html" .}}
+{{ partial "subpage-nav.html" .}}
+
+<div class="main-content-wrap">
+
+  <section class="contact-banner inner-banner">
+    <div class="big-title-bar">
+      <h1 class="big-title">Blog</h1>
+      <h2 class="big-title-text"><span>Applied</span> Nonprofit Research, L.L.C.</h2>
+    </div>
+  </section>
+
+  <section class="blog-section">
+    <div class="blog-container">
+        <div class="left">
+            {{ range $index, $item := where .Site.Pages "Type" "posts" }}
+            {{ if ne (trim $item "\n") "Page(/posts)" }}
+            {{ if isset .Params "date"}}
+            {{ if .Params.date }}
+            <div class="blog-box" id='{{ .Date.Format "Jan 2006" | urlize }}'>
+            {{ end }}
+            {{ else }}
+            <div class="blog-box">
+            {{ end }}
+                <div class="top">
+                    {{ if isset .Params "thumbnail"}}
+                        {{ if .Params.thumbnail }}
+                        <img src="{{ .Params.thumbnail }}" alt="" />
+                        {{ end }}
+                    {{ end }}
+                    <div class="detail">
+                        <h2>
+                            <a href="{{ .Permalink }}">
+                                {{ .Params.title }}
+                            </a>
+                        </h2>
+                        <p>{{ .Params.description }}</p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <ul class="left-side">
+                        {{ if isset .Params "date"}}
+                            {{ if .Params.date }}
+                            <li class="date">{{ .Date.Format .Site.Params.date_format }}</li>
+                            {{ end }}
+                        {{ end }}
+                        {{ if isset .Params "author"}}
+                            {{ if .Params.author }}
+                            <li class="name"><img src="{{.Params.authorAvatar}}" alt="Profile picture" />{{ .Params.author }}</li>
+                            {{ end }}
+                        {{ end }}
+                    </ul>
+                    <a href="{{ .Permalink }}" class="read-more">Read More</a>
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
+        <div class="sidebar">
+            <div class="latest-post">
+                <h3>Latest Blog Post</h3>
+                <ul>
+                    {{ $posts := where .Site.Pages "Section" "posts" }}
+                    {{ $latest := .Site.Params.recent_posts }}
+                    {{ range $index, $item := first $latest $posts }}
+                    {{ if ne (trim $item "\n") "Page(/posts)" }}
+                    <li>
+                        {{ if isset .Params "thumbnail"}}
+                        <img src="{{.Params.thumbnail}}" alt="">
+                        {{ end }}
+                        <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+                    </li>
+                    {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="archives">
+                <h3>Archives</h3>
+                <ul>
+                    {{ range $index, $item := (where .Site.Pages "Section" "posts").GroupByDate "Jan 2006" }} 
+                        {{ if ne .Key "Jan 0001"}}
+                        <li id="{{ .Key | urlize }}"><a href="#">{{ .Key }}</a></li>
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+  </section>
+
+
+{{ partial "contact.html" . }}
+      
+{{ partial "footer.html" .}}
+      
+{{ partial "script.html" .}}

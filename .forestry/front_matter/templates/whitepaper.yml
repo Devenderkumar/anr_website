@@ -1,0 +1,16 @@
+---
+label: whitepaper
+hide_body: false
+display_field: title
+fields:
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: description
+  label: description
+- type: list
+  name: tags
+  label: tags
+pages:
+- content/whitepapers/testing-123.md

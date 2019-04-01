@@ -1,0 +1,18 @@
+
+{{ partial "head.html" .}}
+
+{{ partial "subpage-nav.html" .}}
+
+<div class="inner-page-wrap privacy-policy-page">
+    <div class="container">
+        <h1 class="inner-page-title">{{ .Title }}</h1>
+        <div class="inner-page-content">
+           {{ .Content }}
+        </div>
+    </div>
+</div>
+
+      
+{{ partial "footer.html" .}}
+      
+{{ partial "script.html" .}}

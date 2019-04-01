@@ -1,0 +1,16 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Applied Nonprofit Research, LLC"
+
+[Params]
+twitter = "https://twitter.com"
+linkedin = "https://linkedin.com"
+facebook = "https://facebook.com"
+
+recent_posts = 10
+date_format = "Jan 2, 2006"
+
+disableKinds = ["section"]
+
+[permalinks]
+	posts = "/posts/:year/:month/:filename/"
