@@ -2,6 +2,8 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Applied Nonprofit Research, LLC"
 
+enableRobotsTXT = true
+
 [Params]
 twitter = "https://twitter.com"
 linkedin = "https://linkedin.com"

@@ -17,7 +17,7 @@ title = "The IRS 990 e-file dataset: getting to the chocolatey center of data de
 
 In June 2016, the IRS [unleashed a torrent](https://www.irs.gov/newsroom/irs-makes-electronically-filed-form-990-data-available-in-new-format) of electronic data on the nonprofit sector. Blandly dubbed the “[IRS 990 filings](https://registry.opendata.aws/irs990/),” these millions of files each contain hundreds of details about a nonprofit’s spending, revenue, compensation, fundraising and more.
 
-![](/uploads/nfl_990.png)
+{{< figure src="/uploads/nfl_990.png" class="figureWithCaption" caption="The beginning of the [2015 IRS Form 990 filing](https://projects.propublica.org/nonprofits/download-filing?path=2016_07_EO%2F13-1922622_990O_201506.pdf) for the [National Football League](https://www.nfl.com), which is exempt from income tax under [Section 501(c)(6)](https://www.irs.gov/charities-non-profits/other-non-profits/business-leagues) of the United States [Internal Revenue Code](https://en.wikipedia.org/wiki/Internal_Revenue_Code)." >}}
 
 The data itself wasn’t new: the IRS has been collecting these disclosures [since 1940](https://en.wikipedia.org/wiki/Form_990). Nor had the public been denied access: scans of the paper records have been [sold by the IRS](https://www.irs.gov/charities-non-profits/copies-of-scanned-eo-returns-available) for years, and are available for free from [archive.org](https://archive.org/details/IRS990).
 
@@ -25,7 +25,7 @@ What was new was the availability of electronic files in their _native format_ o
 
 A couple months before the data release, I had just started a job at [Charity Navigator](https://www.charitynavigator.org/), which rates nonprofits based on nonprofit tax filings. (I now work at[ 990 Consulting](https://www.990consulting.com/), which hosts the free service [Open990](https://www.open990.com/).) Charity Navigator has a hardworking [team](https://www.charitynavigator.org/index.cfm?bay=content.view&cpid=19) of data analysts, who historically typed in [critical 990 data](https://www.charitynavigator.org/index.cfm?bay=content.view&cpid=33) by hand before crunching the numbers. Needless to say, the upcoming release was a Very Big Deal.
 
-![](/uploads/datathon.jpg)
+{{< figure src="/uploads/datathon.jpg" class="figureWithCaption" caption="The original [990 “datathon”](https://aws.amazon.com/blogs/publicsector/how-the-nonprofit-open-data-collective-came-together-to-work-on-irs-990-data-in-the-cloud/) event at the [Aspen Institute](https://www.aspeninstitute.org/blog-posts/aspen-institutes-program-philanthropy-social-innovation-psi-hosts-nonprofit-datathon/) in Washington, D.C. Volunteers spent two days creating “mappings” between the paper form and the electronic version. A follow-up validation event was called — you guessed it — the [990 validatathon](https://www.aspeninstitute.org/blog-posts/aspen-hosts-990-vali-datathon-part-philanthropys-data-revolution/)." >}}
 
 Yet it took more than a year — and [two](https://www.aspeninstitute.org/blog-posts/aspen-institutes-program-philanthropy-social-innovation-psi-hosts-nonprofit-datathon/) [rounds](https://www.aspeninstitute.org/blog-posts/aspen-hosts-990-vali-datathon-part-philanthropys-data-revolution/) of cross-organizational barn-raising— before nearly anyone was able to do much of anything with these data. There are several reasons for this. In this article, I will go over some of the challenges a would-be user would face, and how we’ve solved them at [Open990](https://www.open990.com/).
 
@@ -33,7 +33,7 @@ Yet it took more than a year — and [two](https://www.aspeninstitute.org/blog-p
 
 Although the dataset is called “IRS 990 filings,” there are three separate tax forms contained inside it: the 990, the 990EZ, and the 990PF.
 
-![](/uploads/990_comparison.png)
+{{< figure src="/uploads/990_comparison.png" class="figureWithCaption" caption="The first page of (left) the IRS 990, which is filed for tax-exempt organizations with significant cash flows or specially regulated functions; (center) the IRS 990EZ, for organizations with small — but not extremely small — cash flows; and (right) the IRS 990PF, which is filed by all private foundations. All three kinds of filing appear in the “IRS 990 filings” dataset." >}}
 
 Most tax-exempt organizations are required to annually file a [Form 990](https://www.irs.gov/forms-pubs/about-form-990)(“Return of Organization Exempt from Income Tax”) with the IRS. If you’re a small-ish organization that isn’t subject to special regulations (as are schools and hospitals), you can file the [IRS Form 990EZ](https://www.irs.gov/forms-pubs/about-form-990ez), which is the short form version of the 990. But the EZ is not just an excerpt of the full form: the numbering is different, the descriptions are different, the order is different, and some items have been rolled together in ways that are definitely not designed to be easily compared.
 
@@ -43,17 +43,17 @@ Private foundations — regardless of size — file a different document called 
 
 While more than half of the dataset consists of IRS 990 filings, the EZs and the PFs are not to be ignored.
 
-![](/uploads/filings_by_year.png)
+{{< figure src="/uploads/filings_by_year.png" class="figureWithCaption" caption="The 990 dataset is not just for full Form 990s: it contains hundreds of thousands of filings from smaller organizations (which file the 990EZ) and from private foundations (which file the 990PF). Many of these e-filings also contain various schedules, which add details about specific aspects of the organization." >}}
 
 There are over 120 thousand organizations for which we have seven years’ worth of filings, making it a treasure trove for comparative data. ([Open990](https://www.open990.com/), my social enterprise, specializes in providing such comparative data.)
 
-![](/uploads/filing_count_histo.png)
+{{< figure src="/uploads/filing_count_histo.png" class="figureWithCaption" caption="Filings nominally date back to 2011, but there are numerous filings from earlier than that, typically because of amended returns. There are over 260,000 organizations with at least five years of e-filed data, making the 990 dataset a goldmine for longitudinal analysis." >}}
 
 ## Understanding schema versions
 
 Stop me if you’ve heard this one: you just spent hours (or days) staring at 990 filings in XML format, finding the specific locations (or “[Xpaths](https://www.w3schools.com/Xml/xpath_intro.asp)”) for the data you want. Then you go to run your import script, and…it doesn’t work on half the filings. Why? I’ll tell you why.
 
-![](/uploads/efile_xml.png)
+{{< figure src="/uploads/efile_xml.png" class="figureWithCaption" caption="The beginning of [a 990 filing](https://s3.amazonaws.com/irs-form-990/201541349349307794_public.xml), as viewed in Mozilla Firefox. The “returnVersion” inside the “return” tag indicates what version of the schema is being used. In general, the first four digits should indicate the form year, though 2017 filings have largely been using 2016v3.0 and 2016v3.1." >}}
 
 Look closely at the XML above. See the very first tag, called <Return>? It has an attribute, returnVersion, that you may reasonably have decided to ignore. Don’t.
 
@@ -71,7 +71,7 @@ The same GitHub repository contains a Python program that scans all of the retur
 
 [Apache Spark](https://spark.apache.org/), part of the [Hadoop](http://www.bmc.com/guides/hadoop-ecosystem.html) ecosystem, is used for [unimaginably huge datasets](https://databricks.com/session/netflix-productionizing-spark-on-yarn-for-etl-at-petabyte-scale). By comparison, the entire 990 dataset can fit on the hard disk of most laptops. As of this writing, there are around 2.4 million filings, most of which have only a few hundred data points. That’s not nothing, especially as those data points are deeply and inconsistently nested. But it’s not that big.
 
-![](/uploads/data_points_per_filing.png)  
+{{< figure src="/uploads/data_points_per_filing.png" class="figureWithCaption" caption="Most returns have only a few hundred data points, though a very small number of returns have many thousands. The largest returns do not fit into a single MongoDB record, even after converting to JSON." >}}
 So why was I using it for the Charity Navigator 990 projects? Inexperience, for starters: I had never seen a dataset like this. But it was also because finding what you want in millions of XML files takes a really long time.
 
 There are XML-specific databases that you can use, of course: [eXist](http://exist-db.org/exist/apps/homepage/index.html) and [BaseX](http://basex.org/)are among the better known. This might be the right way to go for some use cases, and if yours is one of them, [I’d love to hear about it](https://www.open990.com/contact/). For most people, though, I think this is all missing the point.

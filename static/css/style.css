@@ -1546,3 +1546,23 @@ figcaption {
     opacity: 0;
     height: 5px;
 }
+
+
+/* Figure Captions for posts */
+figure.figureWithCaption figcaption {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.68);
+    font-size: 14px;
+    letter-spacing: 0;
+    width: 100%;
+    text-align: center;
+}
+
+figure.figureWithCaption figcaption p {
+    color: rgba(0, 0, 0, 0.68);
+    font-size: 14px;
+    letter-spacing: 0;
+}
