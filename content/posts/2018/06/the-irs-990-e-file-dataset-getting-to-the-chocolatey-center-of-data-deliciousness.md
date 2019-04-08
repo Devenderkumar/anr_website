@@ -11,8 +11,8 @@ description = "Learn to extract, transform, and interpret data from the IRS 990 
 tags = ["dataset", "open government", "nonprofit technology", "open data", "data science"]
 thumbnail = "/uploads/efile_xml.png"
 title = "The IRS 990 e-file dataset: getting to the chocolatey center of data deliciousness"
-
 +++
+
 ## Background, or “What the hell am I looking at?”
 
 In June 2016, the IRS [unleashed a torrent](https://www.irs.gov/newsroom/irs-makes-electronically-filed-form-990-data-available-in-new-format) of electronic data on the nonprofit sector. Blandly dubbed the “[IRS 990 filings](https://registry.opendata.aws/irs990/),” these millions of files each contain hundreds of details about a nonprofit’s spending, revenue, compensation, fundraising and more.

@@ -1,7 +1,6 @@
 +++
 description = "Excerpts of electronic Form 990 and 990-EZ filings, converted to spreadsheet form. Additional fields being added regularly."
-title = "IRS 990 Filings -- Spreadsheet Excerpts"
-
+title = "IRS 990 Filings Spreadsheet Excerpts"
 +++
 
 This repository consists of spreadsheet extracts from the annual tax returns of U.S. tax-exempt organizations filed with the IRS for tax years 2010 to 2017. This work is derived from the official IRS Form 990 e-file public dataset. It reflects a sustained effort to organize and simplify the original data. (Additional cleaning and analysis are performed to create the data seen on [Open990](https://www.open990.com). Target users include journalists, researchers, nonprofit organizations, and funders of nonprofit organizations.
@@ -47,7 +46,7 @@ https://irs-990-spreadsheets.s3.amazonaws.com/<form-or-table-name>/<year>.csv
 
 where
 
-<year> is defined as the end of the tax period identified on the filing. 
+`<year>` is defined as the end of the tax period identified on the filing. 
 	
 The dataset is designed to facilitate either offline data exploration or direct querying via Amazon Athena. An Athena tutorial is forthcoming. 
 
@@ -60,7 +59,7 @@ Attribution 4.0 International [(CC BY 4.0)](https://creativecommons.org/licenses
 * [Data dictionary](/downloads/irs-990-spreadsheets/data-dictionary-2019-04-07.pdf) for variables and their data types
 * [Changes in forms over time](/downloads/irs-990-spreadsheets/form-990-variations-2009-2018.xlsx) traces changes to the wording/numbering of the Form 990, 2009 -- 2018
 
-### And from the IRS:
+#### And from the IRS:
 
 * [Form 990 2018](https://www.irs.gov/pub/irs-prior/f990--2018.pdf)
 * [Form 990 2018 Instructions](https://www.irs.gov/pub/irs-prior/i990--2018.pdf)
