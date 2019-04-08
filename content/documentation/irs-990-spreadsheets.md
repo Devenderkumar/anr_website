@@ -20,7 +20,7 @@ This dataset is a work in progress, and we are adding additional fields and form
 - `irs990ez_part_03_list`: Form 990-EZ Part III, list of program service accomplishments.
     - **Download: [2017](https://irs-990-spreadsheets.s3.amazonaws.com/irs990ez_part_03_list/irs990_part_07b_list_2017.csv), [2016](https://irs-990-spreadsheets.s3.amazonaws.com/irs990ez_part_03_list/irs990_part_07b_list_2016.csv), [2015](https://irs-990-spreadsheets.s3.amazonaws.com/irs990ez_part_03_list/irs990_part_07b_list_2015.csv), [2014](https://irs-990-spreadsheets.s3.amazonaws.com/irs990ez_part_03_list/irs990_part_07b_list_2014.csv), [2013](https://irs-990-spreadsheets.s3.amazonaws.com/irs990ez_part_03_list/irs990_part_07b_list_2013.csv), [2012](https://irs-990-spreadsheets.s3.amazonaws.com/irs990ez_part_03_list/irs990_part_07b_list_2012.csv), [2011](https://irs-990-spreadsheets.s3.amazonaws.com/irs990ez_part_03_list/irs990_part_07b_list_2011.csv), [2010](https://irs-990-spreadsheets.s3.amazonaws.com/irs990ez_part_03_list/irs990_part_07b_list_2010.csv)**
 
-See [data dictionary (PDF)](/downloads/irs-990-spreadsheets/data-dictionary-2019-04-07.pdf) for details.
+See [data dictionary (PDF)](/downloads/irs-990-spreadsheets/data-dictionary-2019-04-08.pdf) for details.
 
 ## How the data are organized
 
@@ -56,7 +56,7 @@ Attribution 4.0 International [(CC BY 4.0)](https://creativecommons.org/licenses
 
 ## Additional documentation
 
-* [Data dictionary](/downloads/irs-990-spreadsheets/data-dictionary-2019-04-07.pdf) for variables and their data types
+* [Data dictionary](/downloads/irs-990-spreadsheets/data-dictionary-2019-04-08.pdf) for variables and their data types
 * [Changes in forms over time](/downloads/irs-990-spreadsheets/form-990-variations-2009-2018.xlsx) traces changes to the wording/numbering of the Form 990, 2009 -- 2018
 
 #### And from the IRS:
