@@ -1,6 +1,6 @@
 +++
 description = "Excerpts of electronic Form 990 and 990-EZ filings, converted to spreadsheet form. Additional fields being added regularly."
-title = "IRS 990 Filings Spreadsheet Excerpts"
+title = "IRS 990 Filings (Spreadsheet Excerpts)"
 +++
 
 This repository consists of spreadsheet extracts from the annual tax returns of U.S. tax-exempt organizations filed with the IRS for tax years 2010 to 2017. This work is derived from the official IRS Form 990 e-file public dataset. It reflects a sustained effort to organize and simplify the original data. (Additional cleaning and analysis are performed to create the data seen on [Open990](https://www.open990.com).) Target users include journalists, researchers, nonprofit organizations, and funders of nonprofit organizations.
