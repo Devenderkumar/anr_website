@@ -8,6 +8,7 @@ enableRobotsTXT = true
 twitter = "https://twitter.com"
 linkedin = "https://linkedin.com"
 facebook = "https://facebook.com"
+sitemap_allowed_pages = ["/documentation/", "/posts/", "/whitepapers/"]
 
 recent_posts = 10
 date_format = "Jan 2, 2006"
