@@ -3,7 +3,7 @@ description = "Excerpts of electronic Form 990 and 990-EZ filings, converted to 
 title = "IRS 990 Filings Spreadsheet Excerpts"
 +++
 
-This repository consists of spreadsheet extracts from the annual tax returns of U.S. tax-exempt organizations filed with the IRS for tax years 2010 to 2017. This work is derived from the official IRS Form 990 e-file public dataset. It reflects a sustained effort to organize and simplify the original data. (Additional cleaning and analysis are performed to create the data seen on [Open990](https://www.open990.com). Target users include journalists, researchers, nonprofit organizations, and funders of nonprofit organizations.
+This repository consists of spreadsheet extracts from the annual tax returns of U.S. tax-exempt organizations filed with the IRS for tax years 2010 to 2017. This work is derived from the official IRS Form 990 e-file public dataset. It reflects a sustained effort to organize and simplify the original data. (Additional cleaning and analysis are performed to create the data seen on [Open990](https://www.open990.com).) Target users include journalists, researchers, nonprofit organizations, and funders of nonprofit organizations.
 
 In addition to flattening data from the Forms 990 and 990-EZ into spreadsheets, we have standardized field names over time by paper location. This simplifies the task of finding and retrieving information of interest.
 
@@ -72,4 +72,4 @@ If you would like to be notified when we post new data to this AWS repository, p
 
 ## About the authors
 
-[Applied Nonprofit Research, LLC](https://www.appliednonprofitresearch.com) was formed by data engineer [David Bruce Borenstein](https://www.open990.com/contact) and social science researcher [Heather Kugelmass](https://www.open990.com/contact). Its mission is to facilitate the use of public information surrounding the U.S. nonprofit sector. In addition to maintaining this dataset, Applied Nonprofit Research provides data and infrastructure for [Open990](https://www.open990.com/) -- a free directory of private foundations, charities, and other nonprofits -- and offers consulting services.
+[Applied Nonprofit Research, LLC](https://www.appliednonprofitresearch.com) was formed by data engineer [David Bruce Borenstein](https://www.open990.com/contact) and social scientist [Heather Kugelmass](https://www.open990.com/contact). Its mission is to facilitate the use of public information surrounding the U.S. nonprofit sector. In addition to maintaining this dataset, Applied Nonprofit Research provides data and infrastructure for [Open990](https://www.open990.com/) -- a free directory of private foundations, charities, and other nonprofits -- and offers consulting services.
