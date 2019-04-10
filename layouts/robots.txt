@@ -1,9 +1,9 @@
 User-agent: *
 
 Sitemap: {{ .Sitemap.Filename | default "sitemap.xml" | absURL }}
-{{range .Pages}}{{ if not (in .Permalink "/tags/") }}
+{{/*range .Pages}}{{ if not (in .Permalink "/tags/") }}
 Allow: {{.RelPermalink}}
-{{end}}{{end}}
+{{end}}{{end*/}}
 {{range .Pages}}{{ if (in .Permalink "/tags/") }}
 Disallow: {{.RelPermalink}}
 {{end}}{{end}}

@@ -32,3 +32,21 @@ Use following code to get an image with caption:
 Example:
 
 	{{< figure src="/uploads/nfl_990.png" class="figureWithCaption" caption="The beginning of the 2015 IRS Form 990 filing  for the [National Football League](https://www.nfl.com)." >}}
+
+### Sitemap.xml
+Adding new pages to sitemap.xml can be done in 2 ways:
+1.Add a permalink of new page to the variable `sitemap_allowed_pages` in `config.toml`.
+
+Example:
+
+	sitemap_allowed_pages = ["/documentation/", "/posts/", "/whitepapers/", "/new-page/"]
+
+2.Add new page right into layout of sitemap.xml `\anr\layouts\sitemap.xml` before closing tag `</urlset>`
+
+Example:
+
+		  <url>
+		    <loc>/new-page/</loc>
+		    <lastmod>2019-03-25T19:53:16+00:00</lastmod>
+		  </url>
+	  </urlset>
