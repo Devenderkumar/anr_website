@@ -19,4 +19,9 @@
                 />{{ end }}
   </url>
   {{ end }}{{ end }}{{ end }}
+  <url>
+    <loc>https://appliednonprofitresearch.com/</loc>
+    <lastmod>2019-03-25T19:53:16+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
 </urlset>

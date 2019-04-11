@@ -1566,3 +1566,25 @@ figure.figureWithCaption figcaption p {
     font-size: 14px;
     letter-spacing: 0;
 }
+
+#contact-for-updates {
+	margin-top: 20px;
+}
+
+.blog-detail pre {
+	line-height: 1.8;
+	margin-bottom: 20px;
+}
+
+.blog-detail ul ul {
+	padding-left: 45px;
+	padding-top: 6px;
+}
+
+.blog-detail ul ul li {
+	list-style: circle;
+}
+
+#and-from-the-irs {
+	margin-top: 20px;
+}
