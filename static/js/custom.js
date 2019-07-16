@@ -38,7 +38,7 @@ $('.main-nav a').click(function() {
 $('#btn_submit').click(function() {
     // console.log('ok');
 
-    $.post("https://notify.990consulting.com/990_inquiry"), {
+    $.post("https://notify.appliednonprofitresearch.com/notify"), {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
             subject: document.getElementById('subject').value,
