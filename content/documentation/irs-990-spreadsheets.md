@@ -68,7 +68,7 @@ Attribution 4.0 International [(CC BY 4.0)](https://creativecommons.org/licenses
 
 ## Contact for updates
 
-If you would like to be notified when we post new data to this AWS repository, please use the contact form below with the subject line "Data update request." If you have any questions, concerns, or suggestions about the dataset, please use the form below or email us at [info@appliednonprofitresearch.com](info@appliednonprofitresearch.com).
+If you would like to be notified when we post new data to this AWS repository, please email [inquiries@appliednonprofitresearch.com](inquiries@appliednonprofitresearch.com) with the subject line "Data update request." Please also contact us if you have any questions, concerns, or suggestions about the dataset.
 
 ## About the authors
 
