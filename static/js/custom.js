@@ -34,21 +34,15 @@ $('.main-nav a').click(function() {
 });
 
 $('#btn_submit').click(function() {
-    console.log('submitting form with ' + 
-            document.getElementById('name').value + " " +
-            document.getElementById('email').value + " " + 
-            document.getElementById('subject').value + " " + 
-            document.getElementById('message').value
-    );
-    
-    $.post("https://notify.appliednonprofitresearch.com/notify", {
+    const data = JSON.stringify({
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
             subject: document.getElementById('subject').value,
             message: document.getElementById('message').value,
-        },
+    });
+
+    $.post("https://notify.appliednonprofitresearch.com/notify", data,
         function(data, status) {
-            console.log("Got status " + status + ". Attempting to reset form and fade out.")
             document.getElementById("contact_form").reset();
             $('#form_submitted').delay(500).fadeIn('normal', function() {
                 $(this).delay(2500).fadeOut();
