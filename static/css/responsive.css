@@ -87,6 +87,10 @@
 	    .blog-container {
 	        padding-left: 72px;
 	    }
+
+	    .documentation .big-title-bar .big-title {
+	        width: 40%;
+	    }
 	}
 	
 	@media only screen and (max-width:1199px) {
@@ -128,7 +132,11 @@
 
 	    .blog-section .white-paper {
 		    width: 80%;
-		}
+	    }
+
+	    .documentation .big-title-bar .big-title {
+	        width: 50%;
+	    }
 	}
 	
 	@media only screen and (max-width:830px) {
@@ -602,5 +610,21 @@
 	    .white-papers .contact-banner .big-title-bar .big-title {
 	        width: 45%;
 	        white-space: normal;
+	    }
+
+	    .documentation .big-title-bar .big-title {
+	        width: 50%;
+	        padding-left: 5px;
+	    }
+	}
+
+	@media only screen and (max-width:400px) {
+	    .documentation .big-title-bar .big-title {
+	        width: 60%;
+	        padding-left: 5px;
+	    }
+
+	    .documentation .inner-banner .big-title-bar .big-title-text {
+	        padding-left: 5px;
 	    }
 	}
