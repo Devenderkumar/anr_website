@@ -11,9 +11,7 @@ $(document).ready(function()
 	        }
 	    });
     	
-   });
-});
-
+   }); }); 
 $(function() {
     $('.page-scroll a').bind('click', function(event) {
         var $anchor = $(this);
@@ -36,8 +34,13 @@ $('.main-nav a').click(function() {
 });
 
 $('#btn_submit').click(function() {
-    // console.log('ok');
-
+    console.log('submitting form with ' + 
+            document.getElementById('name').value + " " +
+            document.getElementById('email').value + " " + 
+            document.getElementById('subject').value + " " + 
+            document.getElementById('message').value
+    );
+    
     $.post("https://notify.appliednonprofitresearch.com/notify", {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
@@ -45,13 +48,13 @@ $('#btn_submit').click(function() {
             message: document.getElementById('message').value,
         },
         function(data, status) {
+            console.log("Got status " + status + ". Attempting to reset form and fade out.")
             document.getElementById("contact_form").reset();
-
             $('#form_submitted').delay(500).fadeIn('normal', function() {
                 $(this).delay(2500).fadeOut();
             });
 
-        })
+        }, "json")
     // https://github.com/anr990/anr_website/blob/5cfe2e2f5d39c83d5b1b8ca5eedbc8e638f9772e/js/custom5010.js
     // $('html, body, .main-content-wrap').toggleClass('active')
 });
