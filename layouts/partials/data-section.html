@@ -1,47 +1,32 @@
 <div id="thedata" class="thedata-section">
 	<div class="big-title-bar">
-		<h2 class="big-title">The data</h2>
-		<h2 class="big-title-text hidden-xs">IRS Form 990</h2>
-	</div>
-	<div class="row section-row">
-		<div class="col-3 hidden-xs"></div>
-		<div class="col-9">
-			<div class="irs-form990">
-				<h3 class="visible-xs">IRS Form 990</h3>
-				<p>Nonprofits must disclose many sensitive business details, including revenues, expenses, and compensation data. Nonprofits, which compete with small business for talent and dollars, reveal key insights about the climate of small business in the U.S.</p>
-				<p>Applied Nonprofit Research’s founders have revolutionized access to nonprofit data. As Director of Data Science at Charity Navigator, David Borenstein created open-source tools to democratize electronic IRS 990 forms.</p>
-				<h2 class="font-purple">Those tools power Open990.com, a free searchable database of charities, private foundations, and other nonprofits.</h2>
-			</div>
-		</div>
+		<h2 class="big-title">Data Sources</h2>
+		<h2 class="big-title-text hidden-xs">Nonprofit tax returns</h2>
 	</div>
 	<div class="row section-row">
 		<div class="col-3 hidden-xs"></div>
 		<div class="col-9">
 			<div class="irs-other-sources">
-				<div class="other-sources-title">
-					<h2>Other Sources</h2>
-					<p>The IRS Form 990 plays well with other sources of insight.</p>
-				</div>
 				<div class="other-sources-item-wrap">
 					<div class="other-sources-item">
-						<div class="other-sources-icon"><img src="images/data1.png" alt="" /></div>
+						<div class="other-sources-icon"><img src="{{.Site.BaseURL}}images/data-icon-01.svg" alt="" /></div>
 						<div class="other-sources-content">
-							<h3>Nonprofit websites</h3>
-							<p>Nonprofit websites tell us how an organization sees itself. Through data science, we can understand it at scale.</p>
+							<h3>E-filed IRS Forms 990</h3>
+							<p>990-PF (private foundations), 990-EZ (short form), 990 (long form), 990-N (e-postcard), Schedules</p>
 						</div>
 					</div>
 					<div class="other-sources-item">
-						<div class="other-sources-icon"><img src="images/data2.png" alt="" /></div>
+						<div class="other-sources-icon"><img src="{{.Site.BaseURL}}images/data-icon-02.svg" alt="" /></div>
 						<div class="other-sources-content">
-							<h3>U.S. Census Bureau</h3>
-							<p>By connecting trends in the nonprofit sector to economic and social data at large, we can fill in details and see the big picture.</p>
+							<h3>IRS cumulative information on exempt organizations</h3>
+							<p>Publication 78 (deductible eligibility), EO Business Master File, Statistics of Income annual extract</p>
 						</div>
 					</div>
 					<div class="other-sources-item">
-						<div class="other-sources-icon"><img src="images/data3.png" alt="" /></div>
+						<div class="other-sources-icon"><img src="{{.Site.BaseURL}}images/data-icon-03.svg" alt="" /></div>
 						<div class="other-sources-content">
-							<h3>Social and web analytics</h3>
-							<p>Real time social media feeds, Amazon Alexa, Quantcast, and Google Trends reveal public perception and brand awareness.</p>
+							<h3>National Center for Charitable Statistics</h3>
+							<p>Historical data gleaned from Forms 990 e-filed or paper-filed; NTEE codes</p>
 						</div>
 					</div>
 				</div>

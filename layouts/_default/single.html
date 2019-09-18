@@ -3,16 +3,20 @@
 {{ partial "subpage-nav.html" .}}
 
 <div class="main-content-wrap">
-    <section class="contact-banner inner-banner">
+   <!-- <section class="contact-banner inner-banner">
         <div class="big-title-bar">
             <span class="big-title">Blog</span>
-            <h2 class="big-title-text"><span>Applied</span> Nonprofit Research, L.L.C.</h2>
+           <h2 class="big-title-text"><span>Applied</span> Nonprofit Research, L.L.C.</h2>
         </div>
-    </section>
+    </section>--> 
 
     <section class="blog-section">
         <div class="blog-container">
             <div class="left">
+                    <div class="title">
+                            <h1>Blog</h1>
+                            
+                        </div>
                 <div class="blog-detail">
                     <h1>{{.Title}}</h1>
                     <h3>{{.Params.description}}</h3>
@@ -58,7 +62,8 @@
                     <ul>
                         {{ $posts := where .Site.Pages "Section" "posts" }}
                         {{ $latest := .Site.Params.recent_posts }}
-                        {{ range first $latest $posts }}
+                        {{ range $index, $item := first $latest $posts }}
+                        {{ if ne (trim $item "\n") "Page(/posts)" }}
                         <li>
                             {{ if isset .Params "thumbnail"}}
                             <img src="{{.Params.thumbnail}}" alt="">
@@ -66,13 +71,15 @@
                             <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
                         </li>
                         {{ end }}
+                        {{ end }}
+                        <li><p><a href="{{.Site.BaseURL}}posts/">Posts</a></p></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-{{ partial "contact.html" . }}
+{{ partial "contact-compact.html" . }}
       
 {{ partial "footer.html" .}}
       

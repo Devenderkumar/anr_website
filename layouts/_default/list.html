@@ -4,16 +4,21 @@
 
 <div class="main-content-wrap">
 
-  <section class="contact-banner inner-banner">
+ <!-- <section class="contact-banner inner-banner blog-title">
     <div class="big-title-bar">
       <h1 class="big-title">Blog</h1>
       <h2 class="big-title-text"><span>Applied</span> Nonprofit Research, L.L.C.</h2>
     </div>
-  </section>
+  </section>--> 
 
   <section class="blog-section">
     <div class="blog-container">
+            
         <div class="left">
+                <div class="title">
+                        <h1>Blog</h1>
+                        
+                    </div>
             {{ range $index, $item := where .Site.Pages "Type" "posts" }}
             {{ if ne (trim $item "\n") "Page(/posts)" }}
             {{ if isset .Params "date"}}
@@ -90,7 +95,7 @@
   </section>
 
 
-{{ partial "contact.html" . }}
+{{ partial "contact-compact.html" . }}
       
 {{ partial "footer.html" .}}
       
