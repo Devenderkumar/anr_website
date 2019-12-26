@@ -25,33 +25,32 @@ $(document).ready(function()
 // Sending data to PayPal form 
 $(document).ready(function(){
     $("#checkout_form input").keyup(function(){
+		var fullName = $('#ct_name').val();
+		var firstName = fullName.split(' ')[0];
+		var lastName = fullName.substring(firstName.length).trim();
 		$('#ct_product_val').val($('#ct_product').val());
 		$('#ct_price_val').val($('#ct_price').val().replace(/[_\W]+/g, ""));
-		$('#ct_first_name_val').val($('#ct_first_name').val());
-		$('#ct_last_name_val').val($('#ct_last_name').val());
+		$('#ct_first_name_val').val(firstName);
+		$('#ct_last_name_val').val(lastName);
 		$('#ct_email_val').val($('#ct_email').val());
-		$('#ct_apt_val').val($('#ct_apt').val());
-		$('#ct_street_val').val($('#ct_street').val());
-		$('#ct_city_val').val($('#ct_city').val());
-		$('#ct_zip_val').val($('#ct_zip').val());
     });
 });
 
 // Sending data to notify app
 
 $('#pay_with_paypal').click(function() {
-    const data = JSON.stringify({
-		product: $('#ct_product_val').val(),
-		price: $('#ct_price_val').val(),
-		first_name: $('#ct_first_name_val').val(),
-		last_name: $('#ct_last_name_val').val(),
-		email: $('#ct_email_val').val(),
-		apartment: $('#ct_apt_val').val(),
-		street: $('#ct_street_val').val(),
-		city: $('#ct_city_val').val(),
-		zip: $('#ct_zip_val').val(),
-		purpose: $('#ct_purpose').val()
-	});
+	//var fullName = $('#ct_name').val();
+	//var lastChar = fullName.lastIndexOf(' ');
+	//var firstName = fullName.substring(0, lastChar);
+	//var lastName = fullName.substring(lastChar+1);
+	const data = JSON.stringify({
+	//firstName: firstName,
+	//lastName: lastName,
+	name: $('#ct_name').val(),
+	email: $('#ct_email').val(),
+	purpose: $('#ct_purpose').val(),
+	accept_terms: $('#ct_terms').is(':checked') ? 'yes' : 'no',
+});
 
     $.post("https://notify.appliednonprofitresearch.com/notify", data,
         function(data, status) {

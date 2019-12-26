@@ -1749,6 +1749,7 @@ a,a:hover {
 
 #checkout_form .terms .form-label {
     border: none;
+    width: auto;
 }
 
 #checkout_form .terms label {
@@ -2164,4 +2165,6 @@ margin-right: auto;
 
 .thank-you-page .page-content .submit-btn {
     width: auto;
+    margin-top: 30px;
+    display: inline-block;
 }
