@@ -968,6 +968,10 @@
 		.header-wrap .logo a {
 			font-size: 22px;
 		}
+		#checkout_form .form-control input,
+		#checkout_form .form-control p {
+			font-size: 20px;
+		}
 	}
 
 	@media only screen and (max-width:400px) {

@@ -1718,7 +1718,8 @@ a,a:hover {
 /*========== Checkout-form ==========*/
 
 #checkout_form {
-    max-width: 800px;
+    max-width: 850px;
+    widows: 100%;
     margin: 0 auto;
 }
 
@@ -1731,9 +1732,22 @@ a,a:hover {
     border-color: #1A1A1A;
 }
 
+#checkout_form .form-group {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+#checkout_form .form-group p {
+    font-family: 'Roboto Condensed';
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.2;
+    cursor: not-allowed;
+}
+
 #checkout_form .form-control input,
 #checkout_form .form-control textarea {
-    background: #fff;
+    background: transparent;
     color: #1A1A1A;
 }
 
@@ -1750,6 +1764,7 @@ a,a:hover {
 #checkout_form .terms .form-label {
     border: none;
     width: auto;
+    line-height: 1.2;
 }
 
 #checkout_form .terms label {
@@ -1768,8 +1783,16 @@ a,a:hover {
 }
 
 #checkout_form .terms .form-control {
-    width: 50px;
-    padding-left: 0;
+    max-width: 25px;
+    width: 100%;
+    padding: 0;
+    margin-top: 9px;
+}
+
+#checkout_form .terms .form-control input {
+    width: auto;
+    padding: 0;
+    margin: 0;
 }
 
 /*========================================
@@ -2141,7 +2164,16 @@ margin-right: auto;
     Thank You Page
 ========================================*/
 
-.thank-you-page .page-content {
+.thank-you-page .page-content{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.thank-you-page .page-content .inner-content {
     text-align: center;
     padding-top: 100px;
     min-height: calc(100vh - 160px);

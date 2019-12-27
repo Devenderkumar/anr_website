@@ -28,7 +28,7 @@ $(document).ready(function(){
 		var fullName = $('#ct_name').val();
 		var firstName = fullName.split(' ')[0];
 		var lastName = fullName.substring(firstName.length).trim();
-		$('#ct_product_val').val($('#ct_product').val());
+		$('#ct_product_val').val($('#ct_product').text());
 		$('#ct_price_val').val($('#ct_price').val().replace(/[_\W]+/g, ""));
 		$('#ct_first_name_val').val(firstName);
 		$('#ct_last_name_val').val(lastName);
@@ -53,9 +53,7 @@ $('#pay_with_paypal').click(function() {
 });
 
     $.post("https://notify.appliednonprofitresearch.com/notify", data,
-        function(data, status) {
-            document.getElementById("checkout_form").reset();
-		}, "json")
+        function(data, status) {}, "json")
 });
 
 // Sending data to notify app end code
